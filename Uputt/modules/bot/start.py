@@ -26,7 +26,7 @@ def pmowner(client, callback_query):
 
 logouputt = [
     "https://telegra.ph/file/c394b9d3247403031589d.png",
-    "https://telegra.ph/file/2dc67d913ecc251fbd2fb.jpg"
+    "https://telegra.ph/file/c394b9d3247403031589d.png"
 ]
 
 alive_logo = random.choice(logouputt)
@@ -35,7 +35,7 @@ alive_logo = random.choice(logouputt)
 async def start(app, message):
     chat_id = message.chat.id
     file_id = alive_logo
-    caption = "Hi, Saya Asisstant Mawing-Pyrobot\nTidak Ada Yang Special Kecuali cewe gua."
+    caption = "Hi, Saya Asisstant Zull-Userbot. kalo lu mau beli botprem bisa pc @ownedbyrain"
     reply_markup = InlineKeyboardMarkup([
         [
             InlineKeyboardButton("Support", url="https://t.me/zullsupport"),
