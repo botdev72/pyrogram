@@ -175,7 +175,7 @@ async def upstream(client: Client, message: Message):
             repo.__del__()
             return
         await status.edit(
-            "`[HEROKU]: Update Deploy Zull-Pyrobot Sedang Dalam Proses...`"
+            "`[HEROKU]: Update Deploy Zᴜʟʟ Usᴇʀʙᴏᴛ Sedang Dalam Proses...`"
         )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -192,7 +192,7 @@ async def upstream(client: Client, message: Message):
         except GitCommandError:
             pass
         await status.edit(
-            "`Uputt-Pyrobot Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
+            "`Zᴜʟʟ Usᴇʀʙᴏᴛ Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
         )
     else:
         try:
@@ -201,7 +201,7 @@ async def upstream(client: Client, message: Message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`Zull-Pyrobot Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`",
+            "`Zᴜʟʟ Usᴇʀʙᴏᴛ Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`",
         )
         args = [sys.executable, "-m", "Uputt"]
         execle(sys.executable, *args, environ)
@@ -270,7 +270,7 @@ async def updaterman(client: Client, message: Message):
 add_command_help(
     "update",
     [
-        ["update", "Untuk melihat list pembaruan terbaru dari Zull-Pyrobot."],
+        ["update", "Untuk melihat list pembaruan terbaru dari Zᴜʟʟ Usᴇʀʙᴏᴛ."],
         ["update deploy", "Untuk mengupdate userbot."],
     ],
 )
