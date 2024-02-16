@@ -32,8 +32,6 @@ async def asupan_cmd(client: Client, message: Message):
 
 @Client.on_message(filters.command(["bokep"], cmd) & filters.me)
 async def _(client, message):
-    if message.chat.id in BLACKLIST_CHAT:
-        return await message.reply("<b>Maaf perintah ini dilarang di sini</b>")
     y = await message.reply("<b>🔍 Mencari Video Bokep...</b>")
     try:
         await client.join_chat("https://t.me/+kJJqN5kUQbs1NTVl")
