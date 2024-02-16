@@ -128,7 +128,7 @@ async def create_botlog(client):
     LOGGER("Uputt").info(
         "TUNGGU SEBENTAR SAYANG. SEDANG MEMBUAT GROUP LOG USERBOT UNTUK KAMU"
     )
-    desc = "Group Log untuk Mawing-Userbot.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\nPowered By ~ @storybangzul @ownedbyrain 🐣"
+    desc = "Group Log untuk Zᴜʟʟ Usᴇʀʙᴏᴛ.\n\nHARAP JANGAN KELUAR DARI GROUP INI.\n\nPowered By ~ @strbzul @ownedbyrain 🐣"
     try:
         photo = "Uputt/resources/userbot.jpeg"
         gruplog = await client.create_supergroup("Zull-Userbot Logs", desc)
