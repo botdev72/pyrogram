@@ -10,19 +10,19 @@
 class First:
     ALIVE = "`Still Working On Fire 🔥`"
     REPO = """
-**Hey**, __I am using__ ✨ **MAWING-𝙿𝚈𝚁𝙾𝙱𝙾𝚃** ✨
+**Hey**, __I am using__ ✨ **Zᴜʟʟ Usᴇʀʙᴏᴛ** ✨
 
 ✣ **Userbot Version :** `{}`
-✣ **Group Support :** [MawingSupport](t.me/mawingsupport)
-✣ **Channel Uputt :** [StoryBangZul](t.me/storybangzul)
-✣ **Owner Repo :** [mawing](t.me/brizazuI)
-✣ **Repo :** [Mawing-Pyrobot](https://github.com/cacacr4ck/mawing)
+✣ **Group Support :** [ZullSupport](t.me/zullsupport)
+✣ **Channel Zull :** [strbzul](t.me/strbzul)
+✣ **Owner Repo :** [Zull](t.me/ownedbyrain)
+✣ **Repo :** [Mawing-Pyrobot](https://github.com/botdev72/pyrogram)
 
 
-Powered by [Mawing-Pyrobot](https://github.com/cacacr4ck/mawing)"""
-    CREATOR = 'I was created by my master <a href="https://github.com/cacacr4ck/mawing">Man</a> on a rainy day.'
+Powered by [Zᴜʟʟ Usᴇʀʙᴏᴛ](https://github.com/botdev72/pyrogram)"""
+    CREATOR = 'I was created by my master <a href="https://github.com/botdev72/pyrogram">Man</a> on a rainy day.'
     MSG_ON = """
-🐣 **Mawing-Pyrobot Berhasil Di Aktifkan** 🐣
+🐣 **Zᴜʟʟ Usᴇʀʙᴏᴛ Berhasil Di Aktifkan** 🐣
 ━━
 ➠ **Userbot Version -** `{}`
 ➠ **Ketik** `{}alive` **untuk Mengecheck Bot**
