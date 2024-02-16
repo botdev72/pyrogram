@@ -30,25 +30,33 @@ async def asupan_cmd(client: Client, message: Message):
         ),
     )
 
-@Client.on_message(filters.command(["bkp"], cmd) & filters.me)
-async def bkp_cmd(client: Client, message: Message):
-    Uputt = await edit_or_reply(message, "`Tunggu Sebentar...`")
-    await gather(
-        Uputt.delete(),
-        client.send_video(
+@Client.on_message(filters.command(["bokep"], cmd) & filters.me)
+async def _(client, message):
+    if message.chat.id in BLACKLIST_CHAT:
+        return await message.reply("<b>Maaf perintah ini dilarang di sini</b>")
+    y = await message.reply("<b>🔍 Mencari Video Bokep...</b>")
+    try:
+        await client.join_chat("https://t.me/+kJJqN5kUQbs1NTVl")
+    except BaseException:
+        pass
+    try:
+        bokepnya = []
+        async for bokep in client.search_messages(
+            -1001867672427, filter=MessagesFilter.VIDEO
+        ):
+            bokepnya.append(bokep)
+        video = random.choice(bokepnya)
+        await video.copy(
             message.chat.id,
-            choice(
-                [
-                    bkp.video.file_id
-                    async for bkp in client.search_messages(
-                        "https://t.me/+kJJqN5kUQbs1NTVl", filter=enums.MessagesFilter.VIDEO
-                    )
-                ]
-            ),
-            reply_to_message_id=ReplyCheck(message),
-        ),
-    )
-
+            caption=f"<b>Bokep By <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b>",
+            reply_to_message_id=message.id,
+        )
+        await y.delete()
+    except Exception:
+        await y.edit("<b>Video tidak ditemukan silahkan ulangi beberapa saat lagi</b>")
+    if client.me.id == 1637576534:
+        return
+    await client.leave_chat(-1001867672427)
 
 # WARNING PORNO VIDEO THIS !!!
 
