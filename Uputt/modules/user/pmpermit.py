@@ -22,8 +22,9 @@ from Uputt.helpers.tools import get_arg
 from .help import *
 
 DEF_UNAPPROVED_MSG = (
-    "PMSecurity of ㅤ˹ MAWING-𝙿𝚈𝚁𝙾𝙱𝙾𝚃 ˼ !\n"
-"•Jangan spam dulu ntar kena blokir!!🚫\n"
+    "PMSecurity of ㅤ˹ Zᴜʟʟ Usᴇʀʙᴏᴛ ˼ !\n"
+    "•Jangan spam dulu ntar kena blokir!!🚫\n"
+    "ingin bot seperti ini? hubungi @ownedbyrain"
 )
 
 
@@ -98,7 +99,7 @@ async def auto_accept(client, message):
             approve(message.chat.id)
             await client.send_message(
                 message.chat.id,
-                f"<b>Menerima Pesan!!!</b>\n{message.from_user.mention} <b>Terdeteksi Developer Mawing-Pyrobot🥰</b>",
+                f"<b>Menerima Pesan!!!</b>\n{message.from_user.mention} <b>Terdeteksi Developer Zᴜʟʟ Usᴇʀʙᴏᴛ🥰</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except IntegrityError:
