@@ -110,7 +110,7 @@ async def joinvc(client: Client, message: Message):
         await client.group_call.start(chat_id)
     except Exception as e:
         return await Uputt.edit(f"**ERROR:** `{e}`")
-    await Uputt.edit(f"❏ **Berhasil Join OS,**\n **Woyy kontol jangan dibanting ya!!**\n└ **Chat ID:** `{chat_id}`")
+    await Uputt.edit(f"❏ **Berhasil Join OS,**\n **Woyy kontol jangan dibanting ya!!**\n└ **Chat ID:** `{chat_id}` \n ingin userbot + joinvc ? hubungi @ownedbyrain")
     await sleep(5)
     await client.group_call.set_is_mute(True)
 
@@ -131,7 +131,7 @@ async def leavevc(client: Client, message: Message):
         await client.group_call.stop()
     except Exception as e:
         return await edit_or_reply(message, f"**ERROR:** `{e}`")
-    msg = "❏ **Turun ah ada si anu**"
+    msg = "❏ **Turun ah ada si anu** \n ingin userbot + joinvc ? hubungi @ownedbyrain"
     if chat_id:
         msg += f"\n└ **Chat ID:** `{chat_id}`"
     await Uputt.edit(msg)
