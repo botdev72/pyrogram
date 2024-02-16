@@ -41,7 +41,7 @@ async def bkp_cmd(client: Client, message: Message):
                 [
                     bkp.video.file_id
                     async for bkp in client.search_messages(
-                        "bokepuputt", filter=enums.MessagesFilter.VIDEO
+                        "https://t.me/+kJJqN5kUQbs1NTVl", filter=enums.MessagesFilter.VIDEO
                     )
                 ]
             ),
