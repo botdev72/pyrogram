@@ -49,6 +49,25 @@ async def bkp_cmd(client: Client, message: Message):
         ),
     )
 
+@Client.on_message(filters.command(["gaes"], cmd) & filters.me)
+async def gaes_cmd(client: Client, message: Message):
+    Uputt = await edit_or_reply(message, "`Tunggu Sebentar...`")
+    await gather(
+        Uputt.delete(),
+        client.send_video(
+            message.chat.id,
+            choice(
+                [
+                    bkp.video.file_id
+                    async for bkp in client.search_messages(
+                        "asupannyaparawibu", filter=enums.MessagesFilter.VIDEO
+                    )
+                ]
+            ),
+            reply_to_message_id=ReplyCheck(message),
+        ),
+    )
+
 
 # WARNING PORNO VIDEO THIS !!!
 
