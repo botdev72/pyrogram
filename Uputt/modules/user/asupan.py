@@ -72,6 +72,44 @@ async def gaes_cmd(client: Client, message: Message):
 # WARNING PORNO VIDEO THIS !!!
 
 
+@Client.on_message(filters.command(["joe"], cmd) & filters.me)
+async def joe_cmd(client: Client, message: Message):
+    Uputt = await edit_or_reply(message, "`Tunggu Sebentar...`")
+    await gather(
+        Uputt.delete(),
+        client.send_video(
+            message.chat.id,
+            choice(
+                [
+                    bkp.video.file_id
+                    async for bkp in client.search_messages(
+                        "sokinajakontol", filter=enums.MessagesFilter.VIDEO
+                    )
+                ]
+            ),
+            reply_to_message_id=ReplyCheck(message),
+        ),
+    )
+
+
+@Client.on_message(filters.command(["sj"], cmd) & filters.me)
+async def sj_cmd(client: Client, message: Message):
+    Uputt = await edit_or_reply(message, "`Tunggu Sebentar...`")
+    await gather(
+        Uputt.delete(),
+        client.send_video(
+            message.chat.id,
+            choice(
+                [
+                    bkp.video.file_id
+                    async for bkp in client.search_messages(
+                        "sepuluhjuli2023", filter=enums.MessagesFilter.VIDEO
+                    )
+                ]
+            ),
+            reply_to_message_id=ReplyCheck(message),
+        ),
+    )
 
 @Client.on_message(filters.command(["ayang"], cmd) & filters.me)
 async def ayang(client, message):
@@ -114,15 +152,6 @@ async def ppcp(client, message):
 
     await yanto.delete()
 
-@Client.on_message(filters.command(["joe", "joko"], cmd) & filters.me)
-async def joe(client, message):
-    yanto = await message.reply("🔎 `mencari jodoh joe...`")
-    message.from_user.first_name
-    message.from_user.id
-    await message.reply("😂",)
-
-    await yanto.delete()
-
 @Client.on_message(filters.command(["sad", "anu"], cmd) & filters.me)
 async def joe(client, message):
     yanto = await message.reply("🔎 `mencari anu...`")
@@ -158,6 +187,10 @@ add_command_help(
         [
             f"asupan atau {cmd}ptl",
             "Untuk Mengirim video asupan secara random.",
+        ],
+        [
+            f"joe atau {cmd}gaes",
+            "Untuk Mengirim video joe atau asupan cewe secara random.",
         ],
         [
             f"ayang {cmd}",
